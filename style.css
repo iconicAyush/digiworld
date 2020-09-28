@@ -15,12 +15,12 @@ body {
 }
 
 .navbar {
-    background-image: linear-gradient(to right, #990e9e, #be88ba);
+    background-color: rgba(20, 18, 180, 0.9);
     padding: 0 !important;
 }
 
 .navbar-brand img {
-    height: 40px;
+    height: 80px;
     padding-left: 20px;
 
 }
@@ -51,16 +51,20 @@ body {
 /*------------Banner-section------------*/
 #banner {
 
-    background-image: linear-gradient(to right, #990e9e, #be88ba);
+    background-image: linear-gradient(rgba(20, 18, 180, 0.9) , cornflowerblue, white);
     color: #fff;
     padding-top: 5%;
 }
 
 .promo-title {
-    font-size: 40px;
+    font-size: 60px;
     font-weight: 600;
     margin-top: 100px;
-
+    font-family: monospace;
+}
+.sub-tittle {
+    font-size: 25px;
+    
 }
 
 .play-btn {
@@ -77,6 +81,17 @@ body {
 #features {
     padding: 50px 0;
 }
+#features a {
+    color: black;
+}
+#features .col-md-2 {
+    box-shadow: 3px 3px 3px 3px grey;
+    padding-left: 0px;
+}
+
+#features .col-md-2:hover {
+    box-shadow: 2px 2px 2px 2px gray;
+}
 
 .col-md-4 {
     padding: 20px;
@@ -91,9 +106,9 @@ h4 {
     padding: 30px;
 }
 
-.title::after {
+.ti-tle::after {
     content: '';
-    background: #990e9e;
+    background: rgba(20, 80, 180, 0.9);
     height: 7px;
     width: 300px;
     margin-left: auto;
@@ -107,12 +122,12 @@ h4 {
     padding: 5px 50px;
     border: none;
     border-radius: 25px;
-    background-image: linear-gradient(to right, #990e9e, #be88ba);
+    background-color: grey;
 }
 
 /*-----------------------------------------aBOUT US--------------------------*/
 #about-us {
-    background: rgb(236, 228, 236);
+    background: #F7F7F7;
     padding: 50px;
 
 }
@@ -138,7 +153,7 @@ h4 {
 }
 
 .testimonials {
-    border-left: 4px solid #be88ba;
+    border-left: 4px solid #F7F7F7;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -157,7 +172,7 @@ h4 {
 
 /*--------------------------cONTACT US-----------------*/
 #social-media {
-    background-color: beige;
+    background-color: #F7F7F7;
     padding: 30px;
 }
 
@@ -180,8 +195,9 @@ h4 {
 /*---------------footer------------*/
 #footer {
 
-    background: beige;
+    background: rgba(20,20,20,0.883);
     padding: 5px;
+    color: aliceblue;
 }
 
 .footer-box {
@@ -190,7 +206,7 @@ h4 {
 }
 
 .footer-box img {
-    width: 120px;
+    width: 200px;
     margin-bottom: 20px;
 }
 
@@ -219,13 +235,11 @@ h4 {
     background-image: linear-gradient(to right, #990e9e, #be88ba);
 }
 
-hr {
-    background-color: rgb(211, 31, 235)
-}
+
 
 .copyright {
     margin-bottom: 0px;
     padding-bottom: 5px;
     text-align: center;
-
+    color: white;
 }
