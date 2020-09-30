@@ -1,3 +1,23 @@
+/*
+@mixin hideTapHighlightColor() {
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+*/
+
+@mixin hardwareAccel() {
+/*	//Improve performance on mobile/tablet devices*/
+	transform: translateZ(0);
+}
+
+@mixin improveAntiAlias() {
+/*	//Improve aliasing on mobile/tablet devices*/
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -31,8 +51,8 @@ body {
 
 }
 
-.navbar-nav li a {
-    color: rgb(255, 254, 254) !important;
+.nav-link {
+    color: rgb(255, 254, 254);
     font-weight: 400;
     float: right;
     text-align: left;
@@ -53,14 +73,92 @@ body {
 
     background-image: linear-gradient(rgba(20, 18, 180, 0.9) , cornflowerblue, white);
     color: #fff;
-    padding-top: 5%;
+    padding-top: 2%;
 }
 
 .promo-title {
-    font-size: 60px;
+/*    font-size: 400%;*/
     font-weight: 600;
-    margin-top: 100px;
+    font-size: 600%;
+    max-width: 100%;
+    margin-top: 20%;
     font-family: monospace;
+}
+.promo-title-about {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 600%;
+    max-width: 100%;
+    margin-top: 3%;
+    font-family: monospace;
+}
+.promo-title-col {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 600%;
+    max-width: 100%;
+    margin-top: 1%;
+    font-family: monospace;
+}
+@media (max-width:1000px) {
+    .promo-title {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 400%;
+    max-width: 100%;
+    margin-top: 20%;
+    font-family: monospace;
+}
+    .sub-tittle {
+    font-size: 20px;
+    
+}
+    .promo-title-col {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 400%;
+    max-width: 100%;
+    margin-top: 1%;
+    font-family: monospace;
+}
+    .promo-title-about {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 400%;
+    max-width: 100%;
+    margin-top: 3%;
+    font-family: monospace;
+}
+}
+@media (max-width:500px) {
+    .promo-title {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 300%;
+    max-width: 100%;
+    margin-top: 20%;
+    font-family: monospace;
+}
+    .sub-tittle {
+    font-size: 15px;
+    
+}
+    .promo-title-col {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 300%;
+    max-width: 100%;
+    margin-top: 1%;
+    font-family: monospace;
+}
+    .promo-title-about {
+/*    font-size: 400%;*/
+    font-weight: 600;
+    font-size: 300%;
+    max-width: 100%;
+    margin-top: 3%;
+    font-family: monospace;
+}
 }
 .sub-tittle {
     font-size: 25px;
@@ -77,6 +175,25 @@ body {
     text-decoration: none;
 }
 
+.example_d {
+color: #000080 !important;
+text-transform: uppercase;
+    font-weight: 600;
+background-color: aliceblue;
+padding: 12px 20px;
+border: 4px solid #fff !important;
+border-radius: 50px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+}
+
+.example_d:hover {
+color: #494949 !important;
+border-radius: 6px;
+border-color: #494949 !important;
+transition: all 0.3s ease 0s;
+}
+
 /*---------------------Features---------------*/
 #features {
     padding: 50px 0;
@@ -84,13 +201,25 @@ body {
 #features a {
     color: black;
 }
-#features .col-md-2 {
-    box-shadow: 3px 3px 3px 3px grey;
-    padding-left: 0px;
+
+#features .col-md-3{
+    display: inline-block;
+	transition-duration: .3s;
+	transition-property: transform;
+
+/*	@include hideTapHighlightColor();*/
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+/*
+	&:hover {
+		transform: scale(1.1);
+	}
+*/
 }
 
-#features .col-md-2:hover {
-    box-shadow: 2px 2px 2px 2px gray;
+#features .col-md-3:hover {
+    transform: scale(1.1);
 }
 
 .col-md-4 {
@@ -99,6 +228,7 @@ body {
 
 h4 {
     padding: 5px;
+    max-width: 100%;
 }
 
 .title {
